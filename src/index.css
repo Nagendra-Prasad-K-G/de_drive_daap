@@ -1,0 +1,172 @@
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  color-scheme: dark;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  place-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #0f172a 0%, #312e81 50%, #0f172a 100%);
+  color: white;
+  overflow: hidden;
+}
+
+/* The Glass Card */
+.glass-card {
+  width: 100%;
+  max-width: 480px;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 24px;
+  padding: 40px;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Top Glow Line */
+.glass-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: linear-gradient(90deg, #3b82f6, #a855f7, #ec4899);
+}
+
+/* Typography */
+h1 {
+  font-size: 2.5rem;
+  font-weight: 800;
+  margin: 0;
+  background: linear-gradient(to right, #fff, #94a3b8);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  text-align: center;
+}
+
+.subtitle {
+  text-align: center;
+  color: #94a3b8;
+  margin-top: 8px;
+  margin-bottom: 32px;
+  font-size: 0.9rem;
+}
+
+/* Connect Button */
+.btn-connect {
+  width: 100%;
+  padding: 16px;
+  border-radius: 12px;
+  border: none;
+  font-weight: bold;
+  font-size: 1rem;
+  cursor: pointer;
+  background: #4f46e5;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  transition: all 0.3s ease;
+}
+
+.btn-connect:hover {
+  background: #4338ca;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(79, 70, 229, 0.3);
+}
+
+/* Upload Area */
+.upload-zone {
+  border: 2px dashed #475569;
+  border-radius: 16px;
+  padding: 40px 20px;
+  text-align: center;
+  background: rgba(15, 23, 42, 0.3);
+  transition: all 0.3s ease;
+  cursor: pointer;
+  margin-bottom: 24px;
+  position: relative;
+}
+
+.upload-zone:hover {
+  border-color: #6366f1;
+  background: rgba(99, 102, 241, 0.1);
+}
+
+.upload-zone input {
+  position: absolute;
+  top: 0; left: 0; width: 100%; height: 100%;
+  opacity: 0;
+  cursor: pointer;
+}
+
+/* Action Button */
+.btn-primary {
+  width: 100%;
+  padding: 16px;
+  border-radius: 12px;
+  border: none;
+  font-weight: bold;
+  font-size: 1.1rem;
+  cursor: pointer;
+  background: linear-gradient(90deg, #4f46e5, #9333ea);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  transition: transform 0.2s;
+}
+
+.btn-primary:disabled {
+  background: #334155;
+  cursor: not-allowed;
+  opacity: 0.7;
+}
+
+.btn-primary:not(:disabled):hover {
+  transform: scale(1.02);
+  box-shadow: 0 0 20px rgba(147, 51, 234, 0.4);
+}
+
+/* Status & Link */
+.status-msg {
+  text-align: center;
+  margin-top: 16px;
+  color: #fbbf24;
+  font-weight: 500;
+}
+
+.success-link {
+  margin-top: 24px;
+  padding: 16px;
+  background: #1e293b;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  text-decoration: none;
+  border: 1px solid transparent;
+  transition: all 0.2s;
+}
+
+.success-link:hover {
+  border-color: #6366f1;
+  background: #0f172a;
+}
+
+.link-text {
+  color: #818cf8;
+  font-weight: 600;
+  text-decoration: underline;
+  text-decoration-color: rgba(129, 140, 248, 0.3);
+}
